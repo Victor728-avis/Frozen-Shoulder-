@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>World Frozen Shoulder Clinic | Southlake, TX | MCD Procedure</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f8fafd; color: #082032; }
+    a { color: #0066cc; text-decoration: none; }
+    .top-bar {
+      background: #19376d; color: #fff; font-size: 0.95em; padding: 8px 0;
+      text-align: center; letter-spacing: 0.5px; 
+    }
+    .top-bar span { margin: 0 18px; }
+    .navbar {
+      background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; align-items: center;
+      justify-content: space-between; padding: 16px 32px;
+    }
+    .navbar .logo { font-size: 1.6em; font-weight: 700; color: #19376d; }
+    .menu { display: flex; gap: 32px; }
+    .menu > li { list-style: none; position: relative; }
+    .menu > li > a { font-weight: 600; padding: 8px 0; display: block; }
+    .menu li:hover > ul { display: block; }
+    .menu ul {
+      display: none; position: absolute; left: 0; top: 30px; background: #f4f7ff;
+      min-width: 220px; box-shadow: 0 4px 16px rgba(0,0,0,0.07); padding: 8px 0; border-radius: 8px;
+      z-index: 10;
+    }
+    .menu ul li { padding: 0; }
+    .menu ul li a { padding: 8px 20px; font-weight: 500; }
+    .hero {
+      background: #e7f2fe;
+      padding: 56px 0 32px 0; text-align: center;
+      position: relative;
+    }
+    .hero h1 { font-size: 2.6em; color: #19376d; margin-bottom: 12px; }
+    .hero h2 { font-size: 1.4em; font-weight: 500; margin-bottom: 18px; color: #2e4053;}
+    .hero .callout { font-size: 1.15em; margin-bottom: 12px; color: #154360; }
+    .hero .locations { font-size: 1em; margin-bottom: 18px; color: #19376d;}
+    .hero .cta-btn {
+      background: #0066cc; color: #fff; font-size: 1.15em; border: none; border-radius: 30px;
+      padding: 16px 36px; cursor: pointer; font-weight: 700;
+      box-shadow: 0 2px 12px rgba(0,102,204,0.07);
+      transition: background 0.2s;
+    }
+    .hero .cta-btn:hover { background: #19376d;}
+    .hero-images {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 20px;
+      margin-top: 16px;
+    }
+    .hero-images img {
+      width: 340px;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(25,55,109,0.08);
+    }
+    .covid-note {
+      background: #f9d17a; color: #402a00; font-size: 1em; text-align: center; padding: 10px 0;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 32px 16px; }
+    .form-section {
+      background: #fff; border-radius: 18px; box-shadow: 0 4px 18px rgba(25,55,109,0.09);
+      padding: 38px 32px; max-width: 540px; margin: 32px auto;
+    }
+    .form-section h3 { text-align: center; color: #19376d; margin-bottom: 18px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; margin-bottom: 6px; font-weight: 500; }
+    .form-group input, .form-group select {
+      width: 100%; padding: 10px; font-size: 1em; border: 1px solid #b1b1b1; border-radius: 6px;
+    }
+    .form-section .submit-btn {
+      width: 100%; background: #0066cc; color: #fff; font-size: 1.13em; border: none;
+      padding: 12px 0; border-radius: 24px; font-weight: 600; cursor: pointer;
+      margin-top: 12px;
+      transition: background 0.2s;
+    }
+    .form-section .submit-btn:hover { background: #19376d;}
+    .doctors { display: flex; gap: 32px; margin-top: 48px; flex-wrap: wrap;}
+    .doctor-profile {
+      background: #f4f7ff; border-radius: 14px; padding: 24px 18px; flex: 1 1 340px;
+      box-shadow: 0 2px 8px rgba(25,55,109,0.05); display: flex; align-items: center; gap: 18px;
+    }
+    .doctor-profile img {
+      width: 110px; height: 110px; object-fit: cover; border-radius: 50%; background: #e6e6e6;
+      border: 3px solid #fff; box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+    }
+    .doctor-info { flex: 1;}
+    .doctor-info h4 { margin: 0 0 6px 0; color: #19376d;}
+    .doctor-info p { margin: 0 0 10px 0; font-size: 1em; color: #2e4053;}
+    .doctor-info .cta { color: #0066cc; font-weight: 600; }
+    .testimonials { margin: 54px 0 28px 0; }
+    .testimonials h3 { text-align: center; color: #19376d; margin-bottom: 24px;}
+    .testimonial-list { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center;}
+    .testimonial {
+      background: #fff; border-radius: 12px; padding: 18px; width: 320px; box-shadow: 0 2px 8px rgba(19,55,109,0.07);
+      display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px;
+    }
+    .testimonial img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
+    .testimonial-quote { font-size: 1em; color: #2e4053; margin-bottom: 6px; }
+    .testimonial-name { font-size: 0.98em; color: #19376d;}
+    .video-testimonials { text-align: center; margin: 18px 0;}
+    .video-thumbnail {
+      display: inline-block; position: relative; margin: 0 10px;
+      cursor: pointer;
+    }
+    .video-thumbnail img { width: 180px; height: 110px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);}
+    .video-thumbnail .fa-play-circle {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      font-size: 2.7em; color: #0066cc; opacity: 0.85;
+    }
+    .section { margin: 42px 0; }
+    .section h3 { color: #19376d; margin-bottom: 14px;}
+    .section p { font-size: 1.08em; color: #2e4053;}
+    .expandable { background: #f4f7ff; border-radius: 10px; padding: 18px; margin: 10px 0;}
+    .expandable a { float: right; font-size: 0.95em;}
+    .why-it-works { background: #e7f2fe; border-radius: 12px; padding: 24px; margin: 44px 0;}
+    .why-it-works h3 { margin-bottom: 12px;}
+    .cta-repeat { text-align: center; margin: 44px 0;}
+    .cta-repeat .cta-btn { margin-top: 10px;}
+    .footer {
+      background: #19376d; color: #fff; padding: 32px 0 18px 0; font-size: 1em; margin-top: 56px;
+    }
+    .footer-content { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 38px; justify-content: space-between;}
+    .footer-links, .footer-contact, .footer-social { margin-bottom: 18px;}
+    .footer-links a { color: #fff; display: block; margin-bottom: 8px;}
+    .footer-contact span { display: block; margin-bottom: 6px;}
+    .footer-social a { color: #fff; font-size: 1.4em; margin-right: 16px;}
+    .footer .footer-cta-btn {
+      background: #f9d17a; color: #19376d; padding: 12px 34px; font-size: 1.05em; border: none; border-radius: 30px;
+      font-weight: 700; cursor: pointer; margin-top: 18px; box-shadow: 0 2px 8px rgba(249,209,122,0.09);
+      transition: background 0.15s;
+    }
+    .footer .footer-cta-btn:hover { background: #ffe4a1;}
+    @media (max-width: 900px) {
+      .container, .footer-content { flex-direction: column; gap: 18px;}
+      .doctors { flex-direction: column; gap: 22px;}
+      .testimonial-list { flex-direction: column; gap: 16px;}
+      .navbar { flex-direction: column; gap: 16px; }
+      .menu { gap: 18px; }
+      .hero-images { flex-direction: column; gap: 16px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. Top Bar / Contact Info -->
+  <div class="top-bar">
+    <span><i class="fa fa-phone"></i> Toll-Free: <b>1-800-555-2632</b></span>
+    <span>US Clinic: <b>+1-817-555-1423</b></span>
+    <span>175 Miron Drive STE 100, Southlake, TX, USA 76092</span>
+    <span>UK: <b>+44-20-7946-0958</b></span>
+    <span>Europe: <b>+372-555-12345</b></span>
+    <span>New Zealand: <b>+64-9-887-6543</b></span>
+    <span>Australia: <b>+61-2-8890-7654</b></span>
+  </div>
+  <!-- 2. Main Navigation Menu -->
+  <nav class="navbar">
+    <div class="logo">World Frozen Shoulder Clinic</div>
+    <ul class="menu">
+      <li><a href="#">Frozen Shoulder</a>
+        <ul>
+          <li><a href="#">What Is It</a></li>
+          <li><a href="#">Symptoms</a></li>
+          <li><a href="#">Causes</a></li>
+          <li><a href="#">Diagnosis</a></li>
+          <li><a href="#">Treatment</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Treatment</a>
+        <ul>
+          <li><a href="#">MCD Treatment Procedure</a></li>
+          <li><a href="#">Impingement Syndrome Procedure</a></li>
+          <li><a href="#">MCD Research Study</a></li>
+          <li><a href="#">Other Treatment Options vs MCD Procedure</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </nav>
+  <!-- 3. Hero Section -->
+  <section class="hero">
+    <h1>World Frozen Shoulder Clinic – Southlake, TX</h1>
+    <h2>START YOUR FROZEN SHOULDER RECOVERY NOW WITH THE MCD PROCEDURE!</h2>
+    <div class="callout">
+      <b>98% success rate in curing Frozen Shoulder</b><br>
+      Immediate pain relief & restored mobility!
+    </div>
+    <div class="locations">Welcoming patients from the US and around the world – Specialized care at our Southlake, Texas clinic</div>
+    <div class="hero-images">
+      <img src="https://frozenshoulderclinic.com/wp-content/uploads/2022/06/shoulder-treatment.jpg" alt="Shoulder Treatment">
+      <img src="https://frozenshoulderclinic.com/wp-content/uploads/2022/06/clinic-team.jpg" alt="Clinic Team">
+    </div>
+    <button class="cta-btn" onclick="document.getElementById('consultation-form').scrollIntoView({behavior: 'smooth'})">
+      Free Consultation
+    </button>
+  </section>
+  <!-- 4. COVID‑19 Note -->
+  <div class="covid-note">
+    <b>International Patients:</b> Travel to USA with <b>NO Covid‑19 Travel Restrictions!</b>
+  </div>
+  <div class="container">
+    <!-- 5. Free Consultation Form -->
+    <section id="consultation-form" class="form-section">
+      <h3>Book Your Free Consultation</h3>
+      <form>
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Your full name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email <span style="color:red">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="Your email address">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number (with country code)</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1-817-555-1423">
+        </div>
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="">Select Country</option>
+            <option>USA</option>
+            <option>Canada</option>
+            <option>United Kingdom</option>
+            <option>Estonia</option>
+            <option>Australia</option>
+            <option>New Zealand</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="referral">How did you hear about us?</label>
+          <select id="referral" name="referral">
+            <option value="">Select</option>
+            <option>Friend</option>
+            <option>YouTube</option>
+            <option>Facebook</option>
+            <option>Google</option>
+            <option>eBook</option>
+            <option>Doctor/Therapist</option>
+            <option>Media</option>
+            <option>Ad</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn">Book Your Free Consultation</button>
+      </form>
+    </section>
+    <!-- 6. Doctor Profiles -->
+    <div class="doctors">
+      <div class="doctor-profile">
+        <img src="https://frozenshoulderclinic.com/wp-content/uploads/2022/06/Dr-Oolo-2022-300x300.jpg" alt="Dr. Allan Gary Oolo-Austin">
+        <div class="doctor-info">
+          <h4>Dr. Allan Gary Oolo-Austin</h4>
+          <p>
+            Developer of the Manual Capsular Dissection (MCD) procedure.<br>
+            Decades of experience treating Frozen Shoulder and related conditions.<br>
+            Honored as an innovator in musculoskeletal medicine, Dr. Oolo-Austin now provides specialized MCD care to US patients at our Southlake, TX clinic.<br>
+            Internationally recognized for revolutionizing frozen shoulder care.
+          </p>
+          <div class="cta">Fill in the form for a free consultation!</div>
+        </div>
+      </div>
+      <div class="doctor-profile">
+        <img src="https://frozenshoulderclinic.com/wp-content/uploads/2022/06/Dr-Leuthard-2022-300x300.jpg" alt="Dr. Linley Leuthard">
+        <div class="doctor-info">
+          <h4>Dr. Linley Leuthard</h4>
+          <p>
+            Osteopathic practitioner, certified in MCD procedure.<br>
+            International educator in advanced shoulder treatments.<br>
+            Unique certification status and extensive training background.<br>
+            Dedicated to improving patient outcomes and sharing expertise worldwide.
+          </p>
+          <div class="cta">Book a free consultation today!</div>
+        </div>
+      </div>
+    </div>
+    <!-- 7. Testimonials / Videos Section -->
+    <section class="testimonials">
+      <h3>Patient Testimonials & Video Success Stories</h3>
+      <div class="testimonial-list">
+        <div class="testimonial">
+          <img src="https://frozenshoulderclinic.com/wp-content/uploads/2022/06/testimonial1-150x150.jpg" alt="Patient 1">
+          <div>
+            <div class="testimonial-quote">"I regained full mobility after just one visit. The pain was gone – truly a miracle!"</div>
+            <div class="testimonial-name">– Mark T., UK</div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <img src="https://frozenshoulderclinic.com/wp-content/uploads/2022/06/testimonial2-150x150.jpg" alt="Patient 2">
+          <div>
+            <div class="testimonial-quote">"The MCD procedure changed my life. I can finally do all my activities again."</div>
+            <div class="testimonial-name">– Lisa P., USA</div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <img src="https://frozenshoulderclinic.com/wp-content/uploads/2022/06/testimonial3-150x150.jpg" alt="Patient 3">
+          <div>
+            <div class="testimonial-quote">"Coming to Texas was worth it. No pain, instant results!"</div>
+            <div class="testimonial-name">– Jüri K., Estonia</div>
+          </div>
+        </div>
+      </div>
+      <div class="video-testimonials">
+        <div class="video-thumbnail">
+          <img src="https://frozenshoulderclinic.com/wp-content/uploads/2022/06/video1.jpg" alt="Testimonial Video 1">
+          <i class="fa fa-play-circle"></i>
+        </div>
+        <div class="video-thumbnail">
+          <img src="https://frozenshoulderclinic.com/wp-content/uploads/2022/06/video2.jpg" alt="Testimonial Video 2">
+          <i class="fa fa-play-circle"></i>
+        </div>
+        <div style="margin-top:8px;"><a href="#">View More Video Testimonials &rarr;</a></div>
+      </div>
+    </section>
+    <!-- 8. Explanation of “Frozen Shoulder” -->
+    <section class="section">
+      <h3>What is Frozen Shoulder?</h3>
+      <p>
+        <b>Adhesive capsulitis</b>, commonly known as frozen shoulder, is a condition where the shoulder joint capsule becomes inflamed and stiff, causing pain and a progressive loss of mobility.<br>
+        Typical symptoms include persistent pain, pronounced stiffness, and difficulty moving the shoulder. Without proper treatment, this condition can severely impair daily activities and may result in long-term disability.<br>
+        Early, specialized intervention—such as the MCD procedure—can prevent chronic pain and restore shoulder function.
+      </p>
+      <img src="https://frozenshoulderclinic.com/wp-content/uploads/2022/06/frozen-shoulder-diagram.jpg" alt="Frozen Shoulder Diagram" style="display:block;margin:22px auto 0 auto;max-width:360px;border-radius:14px;">
+    </section>
+    <!-- 9. Treatment Description -->
+    <section class="section">
+      <h3>The MCD Procedure – Non-Surgical Frozen Shoulder Cure</h3>
+      <div class="expandable">
+        <p>
+          The <b>Manual Capsular Dissection (MCD)</b> procedure is a breakthrough, non-surgical treatment with a 98% success rate.<br>
+          Unlike conventional methods, MCD rapidly isolates and liberates scar tissue with precise manual techniques, restoring motion and resolving pain.<br>
+          The procedure is typically completed in about an hour; most patients leave with restored function the same day.<br>
+          Our advanced pain management protocol uses ultrasound-guided local anesthetic and twilight sedation (no general anesthesia), ensuring a comfortable experience.
+        </p>
+        <img src="https://frozenshoulderclinic.com/wp-content/uploads/2022/06/mcd-procedure.jpg" alt="MCD Procedure" style="display:block;margin:14px auto 0 auto;max-width:370px;border-radius:12px;">
+        <a href="#">Learn More</a>
+      </div>
+    </section>
+    <!-- 10. Why It Works / Unique Strengths -->
+    <section class="why-it-works">
+      <h3>Why the MCD Procedure Works</h3>
+      <ul style="font-size:1.07em;">
+        <li>Personalized screening and assessment for every patient</li>
+        <li>Adaptation to individual shoulder anatomy and pathology</li>
+        <li>Highest probability of success through targeted technique</li>
+        <li>Pain-free protocol with rapid, same-day results</li>
+        <li>Trusted by patients from over 50 countries</li>
+      </ul>
+      <img src="https://frozenshoulderclinic.com/wp-content/uploads/2022/06/patient-success.jpg" alt="Patient Success" style="display:block;margin:18px auto 0 auto;max-width:380px;border-radius:14px;">
+    </section>
+    <!-- 11. Repeat CTA / Reminder -->
+    <div class="cta-repeat">
+      <div>
+        <b>98% Success Rate – Cure Frozen Shoulder in One Visit!</b>
+      </div>
+      <button class="cta-btn" onclick="document.getElementById('consultation-form').scrollIntoView({behavior: 'smooth'})">Request Free Consultation</button>
+    </div>
+  </div>
+  <!-- 12. Footer / Sitemap & Contacts -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">MCD Treatment Procedure</a>
+        <a href="#">Testimonials</a>
+        <a href="#">Contact Us</a>
+        <a href="#">US Clinic</a>
+        <a href="#">Blog</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="footer-contact">
+        <span><i class="fa fa-map-marker-alt"></i> 175 Miron Drive STE 100, Southlake, TX, USA 76092</span>
+        <span><i class="fa fa-phone"></i> Toll-Free: 1-800-555-2632</span>
+        <span>US Clinic: +1-817-555-1423</span>
+        <span>UK: +44-20-7946-0958</span>
+        <span>Europe: +372-555-12345</span>
+        <span>New Zealand: +64-9-887-6543</span>
+        <span>Australia: +61-2-8890-7654</span>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <button class="footer-cta-btn" onclick="document.getElementById('consultation-form').scrollIntoView({behavior: 'smooth'})">Request Free Consultation</button>
+    </div>
+    <div style="text-align:center;margin-top:22px;color:#e7f2fe; font-size:0.95em;">&copy; 2025 World Frozen Shoulder Clinic. All rights reserved.</div>
+  </footer>
+</body>
+</html>
